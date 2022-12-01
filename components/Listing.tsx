@@ -57,7 +57,7 @@ export default function Listing() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center p-4 w-full max-w-5xl mt-12">
+    <div className="flex flex-col justify-center items-center p-4 w-full max-w-5xl mt-8">
       <nav>
         <ul className="flex">
           {technology.map((item) => (
@@ -75,7 +75,7 @@ export default function Listing() {
           ))}
         </ul>
       </nav>
-      <section className="mt-12 w-full">
+      <section className="mt-8 w-full">
         {isLoading ? returnLoading() : returnResult()}
       </section>
     </div>

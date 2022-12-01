@@ -9,7 +9,7 @@ export default function CodeCard({ id, title, code }: CodeCardProps) {
   return (
     <li key={id}>
       <p className="mt-8 mb-8">{title}</p>
-      <code className="bg-slate-600 p-4 rounded-md">{code}</code>
+      <code className="bg-slate-700 p-4 rounded-md">{code}</code>
     </li>
   );
 }
