@@ -1,16 +1,60 @@
 import React, { useState, useEffect } from "react";
 import { technology, codes } from "../json";
+import CodeCard from "./CodeCard";
 
 export default function Listing() {
   const [currentTab, setCurrentTab] = useState(1);
   const [code, setCode] = useState<any>([]);
   const [isLoading, setLoading] = useState(true);
+
   useEffect(() => {
+    fetchData();
+  }, [currentTab]);
+
+  const fetchData = () => {
     const res = codes.filter(
       (item) => item.technology == codes[currentTab - 1].technology
     );
     setCode(res);
-  }, [currentTab]);
+    setLoading(false);
+  };
+
+  const returnNotFound = () => {
+    return (
+      <div>
+        <p>Not Found</p>
+      </div>
+    );
+  };
+
+  const returnLoading = () => {
+    return (
+      <div>
+        <p>Loading..</p>
+      </div>
+    );
+  };
+
+  const returnResult = () => {
+    return (
+      <div>
+        {code.length > 0 ? (
+          <ul className="p-2 mb-8">
+            {code.map((item: any) => (
+              <CodeCard
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                code={item.code}
+              />
+            ))}
+          </ul>
+        ) : (
+          returnNotFound()
+        )}
+      </div>
+    );
+  };
 
   return (
     <div className="flex flex-col justify-center items-center p-4 w-full max-w-5xl mt-12">
@@ -32,18 +76,7 @@ export default function Listing() {
         </ul>
       </nav>
       <section className="mt-12 w-full">
-        {code.length > 0 ? (
-          <ul className="p-2 mb-8">
-            {code.map((item: any) => (
-              <li key={item.id}>
-                <p className="mt-8 mb-8">{item.title}</p>
-                <code className="bg-slate-600 p-4 rounded-md">{item.code}</code>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>Not Found</p>
-        )}
+        {isLoading ? returnLoading() : returnResult()}
       </section>
     </div>
   );
