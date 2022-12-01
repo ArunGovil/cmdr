@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Header, Hero } from "../components";
 
 export default function Home() {
   return (
@@ -8,8 +9,9 @@ export default function Home() {
         <meta name="description" content="jack of all commands" />
         <link rel="icon" href="/img/frame.png" />
       </Head>
-      <main className="flex items-center justify-center h-screen">
-        <p className="font-medium text-2xl">cmdr</p>
+      <main className="flex flex-col items-center">
+        <Header />
+        <Hero />
       </main>
     </div>
   );
