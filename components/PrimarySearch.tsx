@@ -31,7 +31,7 @@ export default function PrimarySearch() {
         <ul>
           {technology.map((item) => (
             <li
-              className="mt-2 text-sm font-light text-slate-400 cursor-pointer hover:text-white hover:bg-orange-500 pt-1 pb-1 pl-1 rounded-md"
+              className="mt-2 text-sm font-light text-slate-400 cursor-pointer hover:text-white hover:bg-gradient-to-br from-[#FF4D4D] to-orange-500 pt-1 pb-1 pl-1 rounded-md"
               key={item.id}
             >
               {item.title}
@@ -49,7 +49,7 @@ export default function PrimarySearch() {
           className="bg-black border-l border-r border-t border-b rounded-l-lg p-2 border-slate-800 h-12 w-96 text-sm"
           placeholder={placeholder.placeholder}
         />
-        <div className="p-2 flex items-center justify-center cursor-pointer bg-orange-500 rounded-r-lg text-sm pl-3 pr-3">
+        <div className="p-2 flex items-center justify-center cursor-pointer bg-gradient-to-br from-[#FF4D4D] to-orange-500 rounded-r-lg text-sm pl-3 pr-3">
           search
         </div>
       </div>
