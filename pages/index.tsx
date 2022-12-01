@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header, Hero } from "../components";
+import { Header, Hero, Listing } from "../components";
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <Header />
         <Hero />
+        <Listing />
       </main>
     </div>
   );

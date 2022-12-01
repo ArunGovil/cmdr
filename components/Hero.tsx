@@ -3,9 +3,9 @@ import React from "react";
 export default function Hero() {
   return (
     <div className="flex flex-col justify-center items-center p-4 w-full h-[70vh] max-w-5xl">
-      <p className="text-5xl font-semibold">Every Command Ever!</p>
+      <p className="text-5xl font-semibold">every command ever!</p>
       <p className="text-md font-thin mt-6">
-        We curate every command you will ever need.
+        we curate every command you will ever need.
       </p>
       <div className="mt-12 flex">
         <input
