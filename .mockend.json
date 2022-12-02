@@ -1,7 +1,7 @@
 {
   "Codes": {
     "id": {
-      "number": {}
+      "int": {}
     },
     "name": {
       "string": {}
