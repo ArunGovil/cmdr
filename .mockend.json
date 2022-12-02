@@ -1,8 +1,5 @@
 {
   "Codes": {
-    "id": {
-      "int": {}
-    },
     "name": {
       "string": {}
     },
