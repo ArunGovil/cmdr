@@ -39,7 +39,7 @@ export default function Listing() {
     return (
       <div>
         {code.length > 0 ? (
-          <ul className="p-2 mb-8">
+          <ul className="mb-8">
             {code.map((item: any) => (
               <CodeCard
                 key={item.id}

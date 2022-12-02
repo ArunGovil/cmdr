@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default function Footer() {
   const logo = require("../public/img/cmdr.png");
-  const github = require("../public/img/github.png");
   return (
     <nav className="flex justify-between p-4 items-center w-full max-w-5xl mt-8">
       <Link href="/">
