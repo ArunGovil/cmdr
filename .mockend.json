@@ -1,0 +1,16 @@
+{
+  "codes": {
+    "id": {
+      "number": 0
+    },
+    "name": {
+      "string": "Create React App using npm"
+    },
+    "tags": {
+      "string": ["reactjs", "npm"]
+    },
+    "code": {
+      "string": "npx create-react-app your-app-name"
+    }
+  }
+}
