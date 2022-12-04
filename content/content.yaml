@@ -1,0 +1,80 @@
+# reactJs commands
+- title: Create React App using npm
+  code: npm init react-app app-name
+  technology: reactJs
+  tags:
+    - reactJs
+    - npm
+- title: Create React App using npx
+  code: npx create-react-app app-name
+  technology: reactJs
+  tags:
+    - reactJs
+    - npx
+- title: Create React App using Yarn
+  code: yarn create react-app app-name
+  technology: reactJs
+  tags:
+    - reactJs
+    - yarn
+- title: Create React Typescript App using npm
+  code: npm init react-app app-name --template typescript
+  technology: reactJs
+  tags:
+    - reactJs
+    - npm
+- title: Create React Typescript App using npx
+  code: npx create-react-app app-name --template typescript
+  technology: reactJs
+  tags:
+    - reactJs
+    - npx
+- title: Create React Typescript App using Yarn
+  code: yarn create react-app app-name --template typescript
+  technology: reactJs
+  tags:
+    - reactJs
+    - yarn
+
+# nextJs commands
+- title: Create React App using npm
+  code: npm init react-app app-name
+  technology: nextJs
+  tags:
+    - nextJs
+    - npm
+- title: Create React App using npx
+  code: npx create-react-app app-name
+  technology: nextJs
+  tags:
+    - nextJs
+    - npx
+
+# reactNative commands
+- title: Create React Native App using npx
+  code: npx react-native init appName
+  technology: reactNative
+  tags:
+    - reactNative
+    - npm
+- title: Create React Typescript App using npx
+  code: npx react-native init appName --template react-native-template-typescript
+  technology: reactNative
+  tags:
+    - reactNative
+    - typescript
+    - npx
+
+# git commands
+- title: Git add remote url
+  code: git remote add origin repo-url
+  technology: git
+  tags:
+    - git
+    - remote
+- title: View remote url
+  code: git remote -v
+  technology: git
+  tags:
+    - git
+    - remote

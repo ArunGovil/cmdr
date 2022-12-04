@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { technology, placeholders } from "../json";
 
@@ -46,12 +47,15 @@ export default function PrimarySearch() {
       <div className="mt-12 flex">
         <input
           onChange={(e) => setQuery(e.target.value)}
-          className="bg-black border-l border-r border-t border-b rounded-l-lg p-2 border-slate-800 h-12 w-96 text-sm"
+          className="bg-black border-l border-r border-t border-b rounded-l-lg p-2 border-slate-800 h-12 w-96 max-w-[75vw] text-sm"
           placeholder={placeholder.placeholder}
         />
-        <div className="p-2 flex items-center justify-center cursor-pointer bg-gradient-to-br from-[#FF4D4D] to-orange-500 rounded-r-lg text-sm pl-3 pr-3">
-          search
-        </div>
+        <Link
+          href="/details"
+          className="p-2 flex items-center justify-center cursor-pointer bg-gradient-to-br from-[#FF4D4D] to-orange-500 rounded-r-lg text-sm pl-3 pr-3"
+        >
+          <p>search</p>
+        </Link>
       </div>
       {isVisible && returnSuggestions()}
     </div>

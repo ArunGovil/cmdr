@@ -1,0 +1,11 @@
+# tabs
+- id: 1
+  title: reactJs
+- id: 2
+  title: nextJs
+- id: 3
+  title: reactNative
+- id: 4
+  title: git
+- id: 5
+  title: django

@@ -1,36 +1,39 @@
 import React, { useState, useEffect } from "react";
 import { technology, codes } from "../json";
 import CodeCard from "./CodeCard";
+import content from "../content/content.yaml";
+import tabs from "../content/tabs.yaml";
 
 export default function Listing() {
-  const [currentTab, setCurrentTab] = useState(1);
+  const [currentTab, setCurrentTab] = useState({ id: 1, title: "reactJs" });
   const [code, setCode] = useState<any>([]);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetchData();
   }, [currentTab]);
 
-  const fetchData = () => {
-    const res = codes.filter(
-      (item) => item.technology == codes[currentTab - 1].technology
-    );
-    setCode(res);
+  const fetchData = async () => {
+    const data = content.filter((item) => {
+      return item.technology == currentTab.title;
+    });
+    setCode(data);
     setLoading(false);
   };
 
   const returnNotFound = () => {
     return (
-      <div>
-        <p>Not Found</p>
+      <div className="text-center">
+        <p className="font-thin">No Result Found</p>
       </div>
     );
   };
 
   const returnLoading = () => {
     return (
-      <div>
-        <p>Loading..</p>
+      <div className="text-center">
+        <p className="font-thin">Loading..</p>
       </div>
     );
   };
@@ -60,19 +63,20 @@ export default function Listing() {
     <div className="flex flex-col justify-center items-center p-4 w-full max-w-5xl mt-8">
       <nav>
         <ul className="flex">
-          {technology.map((item) => (
-            <li
-              key={item.id}
-              onClick={() => setCurrentTab(item.id)}
-              className={
-                item.id == currentTab
-                  ? "cursor-pointer p-2 mr-2 border-b-2 border-orange-500"
-                  : "cursor-pointer p-2 mr-2 border-none"
-              }
-            >
-              {item.title}
-            </li>
-          ))}
+          {tabs.length > 0 &&
+            tabs.map((item) => (
+              <li
+                key={item.id}
+                onClick={() => setCurrentTab(item)}
+                className={
+                  item.title == currentTab.title
+                    ? "cursor-pointer p-2 mr-2 border-b-2 border-orange-500"
+                    : "cursor-pointer p-2 mr-2 border-none"
+                }
+              >
+                {item.title}
+              </li>
+            ))}
         </ul>
       </nav>
       <section className="mt-8 w-full">
