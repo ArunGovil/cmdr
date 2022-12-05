@@ -60,7 +60,7 @@ export default function SearchListing() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center p-4 w-full min-h-[90vh] max-w-5xl mt-8">
+    <div className="flex flex-col justify-center items-center p-4 w-full min-h-[90vh] max-w-5xl mt-2">
       <section className="mt-8 w-full">
         {isLoading ? returnLoading() : returnResult()}
       </section>

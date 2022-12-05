@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Header, Footer, SearchListing } from "../components";
+import { Header, Footer, SearchListing, SecondarySearch } from "../components";
 
 export default function Details() {
   return (
@@ -10,7 +10,8 @@ export default function Details() {
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main className="flex flex-col items-center">
-        <Header showSearch={true} />
+        <Header showSearch={false} />
+        <SecondarySearch />
         <SearchListing />
         <Footer />
       </main>
