@@ -8,3 +8,5 @@ export { default as About } from "./About";
 //components
 export { default as CodeCard } from "./CodeCard";
 export { default as PrimarySearch } from "./PrimarySearch";
+export { default as SearchListing } from "./SearchListing";
+export { default as SecondarySearch } from "./SecondarySearch";
