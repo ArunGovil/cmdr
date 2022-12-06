@@ -9,7 +9,11 @@ export default function Footer() {
         <Image src={logo} alt="cmdr" className="w-12" />
       </Link>
 
-      <a target="_blank" rel="noreferrer" href="https://github.com/ArunGovil">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/ArunGovil/cmdr"
+      >
         <p className="font-medium text-sm hover:text-orange-400">@arungovil</p>
       </a>
     </nav>

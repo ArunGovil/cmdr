@@ -42,12 +42,11 @@ export default function PrimarySearch() {
         {data.length > 0 ? (
           <ul>
             {data.map((item) => (
-              <li
-                className="mt-2 text-sm font-light text-slate-400 cursor-pointer hover:text-white hover:bg-gradient-to-br from-[#FF4D4D] to-orange-500 pt-1 pb-1 pl-1 rounded-md"
-                key={item.id}
-              >
-                {item.title}
-              </li>
+              <Link key={item.id} href="/details">
+                <li className="mt-2 text-sm font-light text-slate-400 cursor-pointer hover:text-white hover:bg-gradient-to-br from-[#FF4D4D] to-orange-500 pt-1 pb-1 pl-1 rounded-md">
+                  {item.title}
+                </li>
+              </Link>
             ))}
           </ul>
         ) : (

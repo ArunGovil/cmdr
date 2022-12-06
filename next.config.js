@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
   webpack: function (config) {
     config.module.rules.push({
       test: /\.ya?ml$/,
@@ -10,6 +8,8 @@ const nextConfig = {
     });
     return config;
   },
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
 module.exports = nextConfig;
