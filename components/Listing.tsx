@@ -25,7 +25,7 @@ export default function Listing() {
   const returnNotFound = () => {
     return (
       <div className="text-center">
-        <p className="font-thin">No Result Found</p>
+        <p className="font-thin">no commands found</p>
       </div>
     );
   };

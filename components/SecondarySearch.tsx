@@ -1,19 +1,13 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { technology, placeholders } from "../json";
+import { placeholders } from "../json";
 
-export default function SecondarySearch() {
-  const [query, setQuery] = useState("");
-  const [isVisible, setVisible] = useState(false);
+interface SecondarySearchProps {
+  onChange: any;
+}
+
+export default function SecondarySearch({ onChange }: SecondarySearchProps) {
   const [placeholder, setPlaceholder] = useState(placeholders[0]);
-
-  useEffect(() => {
-    if (query.length > 2) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  }, [query]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,7 +24,7 @@ export default function SecondarySearch() {
     <div>
       <div className="mt-12 flex">
         <input
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => onChange(e.target.value)}
           className="bg-black border-l border-r border-t border-b rounded-l-lg p-2 border-slate-800 h-12 w-96 max-w-[75vw] text-sm"
           placeholder={placeholder.placeholder}
         />

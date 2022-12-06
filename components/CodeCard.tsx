@@ -56,7 +56,7 @@ export default function CodeCard({ id, title, code }: CodeCardProps) {
           )}
         </button>
         <pre>
-          <code>{code} </code>
+          <code className="text-slate-400">{code} </code>
         </pre>
       </div>
     </li>

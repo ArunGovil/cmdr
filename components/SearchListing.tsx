@@ -1,39 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { technology, codes } from "../json";
+import { useState, useEffect } from "react";
 import CodeCard from "./CodeCard";
-import content from "../content/content.yaml";
-import tabs from "../content/tabs.yaml";
 
-export default function SearchListing() {
-  const [currentTab, setCurrentTab] = useState({ id: 1, title: "reactJs" });
-  const [code, setCode] = useState<any>([]);
-  const [isLoading, setLoading] = useState(true);
+interface SearchListingProps {
+  searchData: any;
+}
 
-  useEffect(() => {
-    setLoading(true);
-    fetchData();
-  }, [currentTab]);
-
-  const fetchData = async () => {
-    const data = content.filter((item) => {
-      return item.technology == currentTab.title;
-    });
-    setCode(data);
-    setLoading(false);
-  };
-
+export default function SearchListing({ searchData }: SearchListingProps) {
   const returnNotFound = () => {
     return (
-      <div className="text-center">
-        <p className="font-thin">No Result Found</p>
-      </div>
-    );
-  };
-
-  const returnLoading = () => {
-    return (
-      <div className="text-center">
-        <p className="font-thin">Loading..</p>
+      <div className="text-center min-h-[60vh] flex items-center justify-center">
+        <p className="font-thin">no commands found</p>
       </div>
     );
   };
@@ -41,9 +17,9 @@ export default function SearchListing() {
   const returnResult = () => {
     return (
       <div>
-        {code.length > 0 ? (
-          <ul className="mb-8">
-            {code.map((item: any) => (
+        {searchData.length > 0 ? (
+          <ul className="mb-8 min-h-[80vh]">
+            {searchData.map((item: any) => (
               <CodeCard
                 key={item.id}
                 id={item.id}
@@ -60,10 +36,8 @@ export default function SearchListing() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center p-4 w-full min-h-[90vh] max-w-5xl mt-2">
-      <section className="mt-8 w-full">
-        {isLoading ? returnLoading() : returnResult()}
-      </section>
+    <div className="flex flex-col justify-center items-center p-4 w-full  max-w-5xl mt-2">
+      <section className="mt-8 w-full">{returnResult()}</section>
     </div>
   );
 }

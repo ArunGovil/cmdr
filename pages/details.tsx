@@ -1,7 +1,16 @@
 import Head from "next/head";
+import { useState } from "react";
 import { Header, Footer, SearchListing, SecondarySearch } from "../components";
+import content from "../content/content.yaml";
 
 export default function Details() {
+  const [data, setData] = useState(content);
+  const filterData = (query: string) => {
+    const filtered = content.filter((item: any) =>
+      item.title.toLowerCase().includes(query)
+    );
+    setData(filtered);
+  };
   return (
     <div>
       <Head>
@@ -11,8 +20,8 @@ export default function Details() {
       </Head>
       <main className="flex flex-col items-center">
         <Header showSearch={false} />
-        <SecondarySearch />
-        <SearchListing />
+        <SecondarySearch onChange={filterData} />
+        <SearchListing searchData={data} />
         <Footer />
       </main>
     </div>
