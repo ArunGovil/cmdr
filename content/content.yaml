@@ -78,3 +78,9 @@
   tags:
     - git
     - remote
+- title: Git update remote url
+  code: git  -v
+  technology: git remote set-url repo-url
+  tags:
+    - git
+    - remote
