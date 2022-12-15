@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import { Header, Footer, SearchListing, SecondarySearch } from "../components";
-import content from "../content/content.yaml";
+import content from "../content/content.json";
 
 export default function Details() {
   const [data, setData] = useState(content);
@@ -19,7 +19,7 @@ export default function Details() {
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main className="flex flex-col items-center">
-        <Header showSearch={false} />
+        <Header />
         <SecondarySearch onChange={filterData} />
         <SearchListing searchData={data} />
         <Footer />

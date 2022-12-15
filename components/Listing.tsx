@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { technology, codes } from "../json";
 import CodeCard from "./CodeCard";
-import content from "../content/content.yaml";
-import tabs from "../content/tabs.yaml";
+import content from "../content/content.json";
+import { tabs } from "../utils";
 
 export default function Listing() {
-  const [currentTab, setCurrentTab] = useState({ id: 1, title: "reactJs" });
+  const [currentTab, setCurrentTab] = useState({ id: 1, title: "reactjs" });
   const [code, setCode] = useState<any>([]);
   const [isLoading, setLoading] = useState(true);
 

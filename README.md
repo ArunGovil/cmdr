@@ -9,7 +9,7 @@ one stop directory for frequently used commands.
 
 ## What is cmdr?
 
-cmdr is a directory of frequently used commands in software development, categorized across different technologies.
+cmdr is a directory of frequently used commands in daily software development, categorized across different technologies.
 
 ## Running locally
 
@@ -25,9 +25,4 @@ cmdr will start running immediately.
 
 ## Contributing
 
-All the commands are stored inside the project in a YAML file which acts as the current database. A new command can be easily to the system added by altering the YAML file and sending a pull request. 
-
-
-
-
-
+Commands are stored inside the content folder in a JSON file which acts as the current database. You can add new commands to the end of `content/content.json` file and submit a PR.

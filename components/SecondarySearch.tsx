@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { placeholders } from "../json";
+import { placeholders } from "../utils";
 
 interface SecondarySearchProps {
   onChange: any;

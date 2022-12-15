@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/img/frame.png" />
       </Head>
       <main className="flex flex-col items-center">
-        <Header showSearch={false} />
+        <Header />
         <Hero />
         <Listing />
         <About />

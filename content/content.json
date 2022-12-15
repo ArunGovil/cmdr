@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Create React App using npm",
+    "code": "npm init react-app app-name",
+    "technology": "reactjs",
+    "tags": ["reactjs", "npm"]
+  },
+  {
+    "title": "Create React Native App using npm",
+    "code": "npx react-native init appName",
+    "technology": "reactnative",
+    "tags": ["reactnative", "npm"]
+  },
+  {
+    "title": "Git add remote url",
+    "code": "git remote add origin repo-url",
+    "technology": "git",
+    "tags": ["git", "remote"]
+  }
+]
