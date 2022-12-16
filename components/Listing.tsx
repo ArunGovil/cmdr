@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CodeCard from "./CodeCard";
 import content from "../content/content.json";
 import { tabs } from "../utils";
+
+interface tabData {
+  id: number;
+  title: string;
+}
 
 export default function Listing() {
   const [currentTab, setCurrentTab] = useState({ id: 1, title: "reactjs" });
   const [code, setCode] = useState<any>([]);
   const [isLoading, setLoading] = useState(true);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -19,6 +25,16 @@ export default function Listing() {
     });
     setCode(data);
     setLoading(false);
+  };
+
+  const switchTab = (item: tabData) => {
+    setCurrentTab(item);
+    if (sectionRef && sectionRef.current) {
+      sectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   const returnNotFound = () => {
@@ -66,7 +82,7 @@ export default function Listing() {
             tabs.map((item) => (
               <li
                 key={item.id}
-                onClick={() => setCurrentTab(item)}
+                onClick={() => switchTab(item)}
                 className={
                   item.title == currentTab.title
                     ? "cursor-pointer p-2 mr-2 border-b-2 border-orange-500"
@@ -78,7 +94,7 @@ export default function Listing() {
             ))}
         </ul>
       </nav>
-      <section className="mt-8 w-full">
+      <section ref={sectionRef} className="mt-8 w-full">
         {isLoading ? returnLoading() : returnResult()}
       </section>
     </div>
