@@ -6,14 +6,62 @@
     "tags": ["reactjs", "npm"]
   },
   {
+    "title": "Create React App using npx",
+    "code": "npx create-react-app app-name",
+    "technology": "reactjs",
+    "tags": ["reactjs", "npx"]
+  },
+  {
+    "title": "Create React App using Yarn",
+    "code": "yarn create react-app app-name",
+    "technology": "reactjs",
+    "tags": ["reactjs", "yarn"]
+  },
+  {
+    "title": "Create React Typescript App using npm",
+    "code": "npm init react-app app-name --template typescript",
+    "technology": "reactjs",
+    "tags": ["reactjs", "npm", "typescript"]
+  },
+  {
+    "title": "Create React Typescript App using npx",
+    "code": "npx create-react-app app-name --template typescript",
+    "technology": "reactjs",
+    "tags": ["reactjs", "npx", "typescript"]
+  },
+  {
+    "title": "Create React Typescript App using Yarn",
+    "code": "yarn create react-app app-name --template typescript",
+    "technology": "reactjs",
+    "tags": ["reactjs", "yarn", "typescript"]
+  },
+  {
     "title": "Create React Native App using npm",
     "code": "npx react-native init appName",
     "technology": "reactnative",
     "tags": ["reactnative", "npm"]
   },
   {
+    "title": "Create React Typescript App using npx",
+    "code": "npx react-native init appName --template react-native-template-typescript",
+    "technology": "reactnative",
+    "tags": ["reactnative", "npx", "npm", "typescript"]
+  },
+  {
     "title": "Git add remote url",
     "code": "git remote add origin repo-url",
+    "technology": "git",
+    "tags": ["git", "remote"]
+  },
+  {
+    "title": "Git view remote url",
+    "code": "git remote -v",
+    "technology": "git",
+    "tags": ["git", "remote"]
+  },
+  {
+    "title": "Git update remote url",
+    "code": "git remote set-url repo-url",
     "technology": "git",
     "tags": ["git", "remote"]
   }
