@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { placeholders } from "../utils";
 
 interface SecondarySearchProps {
@@ -8,6 +8,7 @@ interface SecondarySearchProps {
 
 export default function SecondarySearch({ onChange }: SecondarySearchProps) {
   const [placeholder, setPlaceholder] = useState(placeholders[0]);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,10 +21,15 @@ export default function SecondarySearch({ onChange }: SecondarySearchProps) {
     return () => clearTimeout(timer);
   }, [placeholder]);
 
+  useEffect(() => {
+    inputRef.current?.focus();
+  });
+
   return (
     <div>
       <div className="mt-12 flex">
         <input
+          ref={inputRef}
           onChange={(e) => onChange(e.target.value)}
           className="bg-black border-l border-r border-t border-b rounded-l-lg p-2 border-slate-800 h-12 w-96 max-w-[75vw] text-sm"
           placeholder={placeholder.placeholder}

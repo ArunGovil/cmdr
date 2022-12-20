@@ -1,5 +1,4 @@
-import React from "react";
-import PrimarySearch from "./PrimarySearch";
+import DemoSearch from "./DemoSearch";
 
 export default function Hero() {
   return (
@@ -9,7 +8,7 @@ export default function Hero() {
         I don&apos;t need to know everything, I just need to know where to find
         it, when I need it.
       </p>
-      <PrimarySearch />
+      <DemoSearch />
     </div>
   );
 }

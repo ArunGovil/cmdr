@@ -1,19 +1,12 @@
 import { useState, useEffect } from "react";
 import CodeCard from "./CodeCard";
+import AddNew from "./AddNew";
 
 interface SearchListingProps {
   searchData: any;
 }
 
 export default function SearchListing({ searchData }: SearchListingProps) {
-  const returnNotFound = () => {
-    return (
-      <div className="text-center min-h-[60vh] flex items-center justify-center">
-        <p className="font-thin">no commands found</p>
-      </div>
-    );
-  };
-
   const returnResult = () => {
     return (
       <div>
@@ -29,7 +22,7 @@ export default function SearchListing({ searchData }: SearchListingProps) {
             ))}
           </ul>
         ) : (
-          returnNotFound()
+          <AddNew />
         )}
       </div>
     );

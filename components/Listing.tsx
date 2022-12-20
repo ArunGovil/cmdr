@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import CodeCard from "./CodeCard";
 import content from "../content/content.json";
 import { tabs } from "../utils";
+import AddNew from "./AddNew";
 
 interface tabData {
   id: number;
@@ -37,14 +38,6 @@ export default function Listing() {
     }
   };
 
-  const returnNotFound = () => {
-    return (
-      <div className="text-center">
-        <p className="font-thin">no commands found</p>
-      </div>
-    );
-  };
-
   const returnLoading = () => {
     return (
       <div className="text-center">
@@ -68,7 +61,7 @@ export default function Listing() {
             ))}
           </ul>
         ) : (
-          returnNotFound()
+          <AddNew />
         )}
       </div>
     );

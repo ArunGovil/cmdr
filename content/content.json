@@ -64,5 +64,11 @@
     "code": "git remote set-url repo-url",
     "technology": "git",
     "tags": ["git", "remote"]
+  },
+  {
+    "title": "Generate React Native release apk build",
+    "code": "cd android ./gradlew assembleRealease",
+    "technology": "reactnative",
+    "tags": ["reactnative", "apk", "build"]
   }
 ]

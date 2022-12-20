@@ -11,6 +11,7 @@ export default function Details() {
     );
     setData(filtered);
   };
+
   return (
     <div>
       <Head>
