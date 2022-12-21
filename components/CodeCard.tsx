@@ -21,7 +21,7 @@ export default function CodeCard({ id, title, code }: CodeCardProps) {
       <div className=" w-full max-w-5xl bg-transparent border border-slate-800 rounded-md mt-4 p-4 relative">
         <button
           onClick={copyToClipboard}
-          className="absolute right-0 top-0 m-2 p-1 rounded-md hover:bg-gradient-to-br from-[#FF4D4D] to-orange-500"
+          className="absolute right-0 top-0 m-2 p-1 rounded-md backdrop-blur-sm hover:bg-gradient-to-br from-[#FF4D4D] to-orange-500"
         >
           {isCopied ? (
             <svg
@@ -55,7 +55,7 @@ export default function CodeCard({ id, title, code }: CodeCardProps) {
             </svg>
           )}
         </button>
-        <pre>
+        <pre className="overflow-x-auto">
           <code className="text-slate-400">{code} </code>
         </pre>
       </div>
