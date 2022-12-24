@@ -61,7 +61,7 @@
   },
   {
     "title": "Git update remote url",
-    "code": "git remote set-url repo-url",
+    "code": "git remote set-url origin repo-url",
     "technology": "git",
     "tags": ["git", "remote"]
   },
