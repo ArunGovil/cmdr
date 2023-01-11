@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import CodeCard from "./CodeCard";
 import AddNew from "./AddNew";
 
@@ -9,9 +8,9 @@ interface SearchListingProps {
 export default function SearchListing({ searchData }: SearchListingProps) {
   const returnResult = () => {
     return (
-      <div className="min-h-[45vh]">
+      <div className="min-h-[45vh] flex items-center justify-center w-full">
         {searchData.length > 0 ? (
-          <ul className="mb-8 min-h-[80vh]">
+          <ul className="mb-8 min-h-[80vh] w-full">
             {searchData.map((item: any) => (
               <CodeCard
                 key={item.id}

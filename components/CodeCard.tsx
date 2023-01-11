@@ -16,7 +16,7 @@ export default function CodeCard({ id, title, code }: CodeCardProps) {
     setTimeout(reset, 2000);
   };
   return (
-    <li key={id}>
+    <li key={id} className="w-full">
       <p className="mt-8 mb-8">{title}</p>
       <div className=" w-full max-w-5xl bg-transparent border border-slate-800 rounded-md mt-4 p-4 relative">
         <button
@@ -55,7 +55,7 @@ export default function CodeCard({ id, title, code }: CodeCardProps) {
             </svg>
           )}
         </button>
-        <pre className="overflow-x-auto">
+        <pre className="overflow-x-auto w-full">
           <code className="text-slate-400">{code} </code>
         </pre>
       </div>

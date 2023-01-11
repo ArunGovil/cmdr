@@ -48,9 +48,9 @@ export default function Listing() {
 
   const returnResult = () => {
     return (
-      <div>
+      <div className="min-h-[50vh] flex justify-center items-center w-full">
         {code.length > 0 ? (
-          <ul className="mb-8">
+          <ul className="mb-8 w-full">
             {code.map((item: any) => (
               <CodeCard
                 key={item.id}
