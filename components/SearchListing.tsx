@@ -9,7 +9,7 @@ interface SearchListingProps {
 export default function SearchListing({ searchData }: SearchListingProps) {
   const returnResult = () => {
     return (
-      <div>
+      <div className="min-h-[45vh]">
         {searchData.length > 0 ? (
           <ul className="mb-8 min-h-[80vh]">
             {searchData.map((item: any) => (

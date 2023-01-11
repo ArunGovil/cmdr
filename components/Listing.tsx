@@ -69,7 +69,7 @@ export default function Listing() {
 
   return (
     <div className="flex flex-col justify-center items-center p-4 w-full max-w-5xl mt-8">
-      <nav>
+      <nav ref={sectionRef} className="pt-4">
         <ul className="flex">
           {tabs.length > 0 &&
             tabs.map((item) => (
@@ -87,7 +87,7 @@ export default function Listing() {
             ))}
         </ul>
       </nav>
-      <section ref={sectionRef} className="mt-8 w-full">
+      <section className="mt-8 w-full">
         {isLoading ? returnLoading() : returnResult()}
       </section>
     </div>
