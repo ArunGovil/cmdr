@@ -51,13 +51,8 @@ export default function Listing() {
       <div className="min-h-[50vh] flex justify-center items-center w-full">
         {code.length > 0 ? (
           <ul className="mb-8 w-full">
-            {code.map((item: any) => (
-              <CodeCard
-                key={item.id}
-                id={item.id}
-                title={item.title}
-                code={item.code}
-              />
+            {code.map((item: any, id: any) => (
+              <CodeCard key={id} id={id} title={item.title} code={item.code} />
             ))}
           </ul>
         ) : (

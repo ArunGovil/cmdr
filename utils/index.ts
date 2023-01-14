@@ -13,11 +13,15 @@ export const tabs = [
   },
   {
     id: 4,
-    title: "django",
+    title: "vite",
   },
   {
     id: 5,
     title: "reactnative",
+  },
+  {
+    id: 6,
+    title: "linux",
   },
 ];
 

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 import { placeholders } from "../utils";
 

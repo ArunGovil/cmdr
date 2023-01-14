@@ -11,10 +11,10 @@ export default function SearchListing({ searchData }: SearchListingProps) {
       <div className="min-h-[45vh] flex items-center justify-center w-full">
         {searchData.length > 0 ? (
           <ul className="mb-8 min-h-[80vh] w-full">
-            {searchData.map((item: any) => (
+            {searchData.map((item: any, id: any) => (
               <CodeCard
-                key={item.id}
-                id={item.id}
+                key={id}
+                id={id}
                 title={item.title}
                 code={item.code}
               />

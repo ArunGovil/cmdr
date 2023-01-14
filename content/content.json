@@ -66,9 +66,69 @@
     "tags": ["git", "remote"]
   },
   {
+    "title": "Git view current status",
+    "code": "git status",
+    "technology": "git",
+    "tags": ["git", "status"]
+  },
+  {
+    "title": "Git view changes/difference made",
+    "code": "git diff file-path",
+    "technology": "git",
+    "tags": ["git", "difference"]
+  },
+  {
+    "title": "Git create new branch",
+    "code": "git checkout -b branch-name",
+    "technology": "git",
+    "tags": ["git", "branch"]
+  },
+  {
+    "title": "Git push new branch",
+    "code": "git push -u origin branch-name",
+    "technology": "git",
+    "tags": ["git", "branch"]
+  },
+  {
     "title": "Generate React Native release apk build",
     "code": "cd android ./gradlew assembleRealease",
     "technology": "reactnative",
     "tags": ["reactnative", "apk", "build"]
+  },
+  {
+    "title": "Create vite project using npm",
+    "code": "npm create vite@latest",
+    "technology": "vite",
+    "tags": ["vite", "npm"]
+  },
+  {
+    "title": "Create vite project using yarn",
+    "code": "yarn create vite",
+    "technology": "vite",
+    "tags": ["vite", "yarn"]
+  },
+  {
+    "title": "Give a file executable permission",
+    "code": "chmod +x file-path",
+    "technology": "linux",
+    "tags": ["permission", "linux"]
+  },
+  {
+    "title": "Switch to superuser mode",
+    "code": "sudo su",
+    "technology": "linux",
+    "tags": ["sudo", "linux"]
+  },
+  {
+    "title": "Create nextjs app using npm",
+    "code": "npx create-next-app@latest",
+    "technology": "nextjs",
+    "tags": ["netxjs", "npm"]
+  },
+  {
+    "title": "Create nextjs app using yarn",
+    "code": "yarn create next-app",
+    "technology": "nextjs",
+    "tags": ["netxjs", "yarn"]
   }
 ]

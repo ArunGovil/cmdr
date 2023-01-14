@@ -6,9 +6,14 @@ import content from "../content/content.json";
 export default function Details() {
   const [data, setData] = useState(content);
   const filterData = (query: string) => {
-    const filtered = content.filter((item: any) =>
-      item.title.toLowerCase().includes(query)
-    );
+    const filtered = content.filter((item: any) => {
+      const keyword = query.toLowerCase();
+      const result =
+        item.title.toLowerCase().includes(keyword) ||
+        item.code.toLowerCase().includes(keyword) ||
+        item.technology.toLowerCase().includes(keyword);
+      return result;
+    });
     setData(filtered);
   };
 
