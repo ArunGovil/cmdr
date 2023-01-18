@@ -130,5 +130,11 @@
     "code": "yarn create next-app",
     "technology": "nextjs",
     "tags": ["netxjs", "yarn"]
+  },
+  {
+    "title": "Git pull rebase config",
+    "code": "git config pull.rebase true",
+    "technology": "git",
+    "tags": ["git", "rebase"]
   }
 ]
