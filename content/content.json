@@ -42,7 +42,7 @@
     "tags": ["reactnative", "npm"]
   },
   {
-    "title": "Create React Typescript App using npx",
+    "title": "Create React Native Typescript App using npx",
     "code": "npx react-native init appName --template react-native-template-typescript",
     "technology": "reactnative",
     "tags": ["reactnative", "npx", "npm", "typescript"]
