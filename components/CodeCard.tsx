@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Notification } from "../context/NotificationContext";
 interface CodeCardProps {
   id: number;
   title: string;
@@ -6,12 +7,14 @@ interface CodeCardProps {
 }
 
 export default function CodeCard({ id, title, code }: CodeCardProps) {
+  const { handleNotification } = useContext(Notification);
   const [isCopied, setCopied] = useState(false);
   const copyToClipboard = () => {
     const reset = () => {
       setCopied(false);
     };
     navigator.clipboard.writeText(code);
+    handleNotification();
     setCopied(true);
     setTimeout(reset, 2000);
   };

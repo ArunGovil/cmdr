@@ -1,7 +1,10 @@
 import Head from "next/head";
-import { Header, Hero, Listing, About, Footer } from "../components";
+import { useContext } from "react";
+import { Header, Hero, Listing, About, Footer, NotificationBadge } from "../components";
+import { Notification } from "../context/NotificationContext";
 
 export default function Home() {
+  const {notification} = useContext(Notification);
   return (
     <div>
       <Head>
@@ -15,6 +18,7 @@ export default function Home() {
         <Listing />
         <About />
         <Footer />
+        {notification && <NotificationBadge />}
       </main>
     </div>
   );

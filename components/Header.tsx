@@ -13,9 +13,9 @@ export default function Header() {
       <a
         target="_blank"
         rel="noreferrer"
-        href="https://github.com/ArunGovil/cmdr"
+        href="https://github.com/ArunGovil/cmdr#how-do-i-add-a-command"
       >
-        <p className="font-medium text-sm hover:text-orange-400">@github</p>
+        <p className="font-medium text-sm hover:text-orange-400">add new</p>
       </a>
     </nav>
   );

@@ -11,6 +11,7 @@ export { default as PrimarySearch } from "./PrimarySearch";
 export { default as SearchListing } from "./SearchListing";
 export { default as SecondarySearch } from "./SecondarySearch";
 export { default as DemoSearch } from "./DemoSearch";
+export { default as NotificationBadge } from "./NotificationBadge";
 
 //buttons
 export { default as AddNew } from "./AddNew";

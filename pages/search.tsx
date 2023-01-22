@@ -1,9 +1,17 @@
 import Head from "next/head";
-import { useState } from "react";
-import { Header, Footer, SearchListing, SecondarySearch } from "../components";
+import { useState, useContext } from "react";
+import {
+  Header,
+  Footer,
+  SearchListing,
+  SecondarySearch,
+  NotificationBadge,
+} from "../components";
 import content from "../content/content.json";
+import { Notification } from "../context/NotificationContext";
 
 export default function Details() {
+  const { notification } = useContext(Notification);
   const [data, setData] = useState(content);
   const filterData = (query: string) => {
     const filtered = content.filter((item: any) => {
@@ -28,6 +36,7 @@ export default function Details() {
         <Header />
         <SecondarySearch onChange={filterData} />
         <SearchListing searchData={data} />
+        {notification && <NotificationBadge />}
         <Footer />
       </main>
     </div>
