@@ -136,5 +136,11 @@
     "code": "git config pull.rebase true",
     "technology": "git",
     "tags": ["git", "rebase"]
+  },
+  {
+    "title": "Find large files in linux",
+    "code": "sudo find / -type f -size +10M -exec ls -lh {} ;",
+    "technology": "linux",
+    "tags": ["linux", "files"]
   }
 ]
