@@ -1,6 +1,14 @@
 import React, { useState, createContext, useMemo } from "react";
 
-export const Notification = createContext();
+interface NotificationContextValue {
+  notification: boolean;
+  handleNotification: () => void;
+}
+
+export const Notification = createContext<NotificationContextValue>({
+  notification: false,
+  handleNotification: () => {},
+});
 
 const NotificationContext = ({ children }: any) => {
   const [notification, setNotification] = useState(false);
