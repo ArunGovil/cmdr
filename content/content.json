@@ -139,7 +139,7 @@
   },
   {
     "title": "Find large files in linux",
-    "code": "sudo find / -type f -size +10M -exec ls -lh {} ;",
+    "code": "sudo find / -type f -size +10M -exec ls -lh {} \";",
     "technology": "linux",
     "tags": ["linux", "files"]
   }
