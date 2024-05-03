@@ -23,6 +23,10 @@ export const tabs = [
     id: 6,
     title: "linux",
   },
+  {
+    id: 7,
+    title: "browser",
+  },
 ];
 
 export const placeholders = [
