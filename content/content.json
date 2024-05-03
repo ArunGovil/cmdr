@@ -142,5 +142,11 @@
     "code": "sudo find / -type f -size +10M -exec ls -lh {} \\;",
     "technology": "linux",
     "tags": ["linux", "files"]
+  },
+  {
+    "title": "Open chrome with web security disabled",
+    "code": "open -na Google Chrome --args --user-data-dir=/tmp/temporary-chrome-profile-dir --disable-web-security --disable-site-isolation-trials",
+    "technology": "browser",
+    "tags": ["browser", "chrome"]
   }
 ]

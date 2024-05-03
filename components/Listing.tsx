@@ -65,7 +65,7 @@ export default function Listing() {
   return (
     <div className="flex flex-col justify-center items-center p-4 w-full max-w-5xl mt-8">
       <nav ref={sectionRef} className="pt-4">
-        <ul className="flex">
+        <ul className="flex justify-center w-screen overflow-y-scroll">
           {tabs.length > 0 &&
             tabs.map((item) => (
               <li
