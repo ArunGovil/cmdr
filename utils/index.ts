@@ -9,7 +9,7 @@ export const tabs = [
   },
   {
     id: 3,
-    title: "nextjs",
+    title: "mac",
   },
   {
     id: 4,

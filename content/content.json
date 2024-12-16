@@ -148,5 +148,18 @@
     "code": "open -na Google Chrome --args --user-data-dir=/tmp/temporary-chrome-profile-dir --disable-web-security --disable-site-isolation-trials",
     "technology": "browser",
     "tags": ["browser", "chrome"]
+  },
+  {
+    "title": "List all running process on mac",
+    "code": "ps aux | grep [application_name]",
+    "technology": "mac",
+    "tags": ["linux", "mac", "terminal"]
+  },
+
+  {
+    "title": "Kill a running process from mac terminal",
+    "code": "kill -9 [process_id]",
+    "technology": "mac",
+    "tags": ["linux", "mac", "terminal"]
   }
 ]
